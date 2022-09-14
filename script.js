@@ -58,4 +58,26 @@ likeBtn.forEach(btn => {
 })
 
 
+// Comment Function
+const commentBtn = document.querySelectorAll(".comment-btn");
+
+commentBtn.forEach(btn => {
+	btn.addEventListener("click" , e=> {
+		let commentBoxId = e.target.getAttribute("data-target");
+		let commentBox = document.getElementById(commentBoxId);
+		if(e.target.classList.contains("fa-regular"))
+		{
+			commentBox.classList.add("show");
+			e.target.classList.remove("fa-regular");
+			e.target.classList.add("fa-solid");
+		}
+		else{
+			commentBox.classList.remove("show");
+			e.target.classList.add("fa-regular");
+			e.target.classList.remove("fa-solid");	
+		}
+	})
+})
+
+
 

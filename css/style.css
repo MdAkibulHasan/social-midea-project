@@ -371,6 +371,38 @@ nav{
 	column-gap: 0.3rem;
 	cursor: pointer;
 }
+.comment-row{
+	width: 90%;
+	position: relative;
+	margin: auto;
+	display: none;
+	transition: all 0.3s;
+}
+.comment-row.show{
+	display: block;
+	transition: all 0.3s;
+}
+.comment-row  input{
+	width: 100%;
+	padding: 10px;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	margin: 10px 0;
+}
+.comment-row  span{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 15px;
+	font-size: 0.9rem;
+	display: inline;
+	cursor: pointer;
+	color: var(--nav-color);
+	font-weight: bolder;
+	background: white;
+	padding-left: 20px;
+}
 .post-profile-icon{
 	display: flex;
 	align-items: center;
