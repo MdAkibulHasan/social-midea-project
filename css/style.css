@@ -11,13 +11,14 @@
 	--body-color:#efefef;
 	--nav-color:#1876f2 ;
 	--bg-color: #fff;
+	--text-color: #626262;
 }
 
 .dark-theme{
 	--body-color:#0a0a0a;
-	--nav-color:#000;
-	--bg-color: #000;
-
+	--nav-color: #000;
+	--bg-color: rgb(27, 27, 27);
+	--text-color: #efefef;
 }
 body{
 	background: var(--body-color);
@@ -109,7 +110,7 @@ nav{
 	background: var(--bg-color);
 	padding: 20px ;
 	border-radius: 4px;
-	color: #626262;
+	color: var(--text-color);
 
 }
 .main-content{
@@ -121,7 +122,7 @@ nav{
 	display: flex;
 	align-items: center;
 	margin-bottom:30px ;
-	color: #626262;
+	color: var(--text-color);
 	width: fit-content;
 }
 .imp-link a img{
@@ -143,7 +144,7 @@ nav{
 }
 .shortcut-links p{
 	margin: 25px 0;
-	color: #626262;
+	color: var(--text-color);
 	font-weight:500;
 }
 .sidebar-title{
@@ -177,6 +178,7 @@ nav{
 	position: relative;
 	overflow: hidden;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	background: var(--body-color);
 }
 .event p{
 	font-size: 12px;
@@ -195,6 +197,18 @@ nav{
     color: #fff;
     font-size:10px;
     padding: 4px 0;
+}
+.right-event{
+	display: grid;
+	row-gap: 0.3rem;
+}
+.right-event a{
+	text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    color: #1876f2;
+    width: fit-content;
 }
 .sidebar-ads{
 	width: 100%;
@@ -295,7 +309,7 @@ nav{
 .user-profile p{
 	margin-bottom: -5px;
 	font-weight: 500;
-	color:#626262;
+	color: var(--text-color);
 }
 .user-profile small{
 	font-size: 12px;
@@ -322,7 +336,7 @@ nav{
 	text-decoration: none;
 	display: flex;
 	align-items:center;
-	color: #626262;
+	color: var(--text-color);
 	margin-right: 30px;
 	font-size: 13px;
 }
@@ -336,7 +350,7 @@ nav{
     background: var(--bg-color);
     border-radius: 6px;
     padding: 20px;
-    color: #626262;
+    color: var(--text-color);
     margin: 20px 0;
     row-gap: 1rem;
     display: grid;
@@ -364,6 +378,7 @@ nav{
     display: grid;
 	grid-template-columns: repeat(3,auto);
 	column-gap: 2rem;
+	color: var(--text-color);
 }
 .activity-icons div{
 	display: grid;
@@ -374,6 +389,7 @@ nav{
 .post-profile-icon{
 	display: flex;
 	align-items: center;
+	color: var(--text-color);
 }
 
 .post-profile-icon img{
@@ -385,15 +401,80 @@ nav{
 	color: #9a9a9a;
 
 }
+.comment-row{
+	width: 100%;
+	position: relative;
+	margin: auto;
+	background: var(--bg-color);
+	padding: 10px 20px;
+	margin-top: 20px;
+	border-radius: 6px;
+}
+.comment-row  .comment-box{
+	position: relative;
+	display: none;
+}
+.comment-row  .comment-box.show{
+	position: relative;
+	display: block;
+}
+.comment-row .comment-box input{
+	width: 100%;
+	padding: 10px;
+	border-radius: 6px;
+	outline: none;
+	border: none;
+	background: var(--body-color);
+	color: var(--text-color);
+}
+.comment-row .comment-box .comment-submit-btn{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 15px;
+	font-size: 0.9rem;
+	display: inline;
+	cursor: pointer;
+	color: var(--text-color);
+	font-weight: bolder;
+	background: var(--body-color);
+	padding: 0 20px;
+}
+.comment-row .comments {
+	display: grid;
+	row-gap: 1rem;
+	margin: 10px 0;
+}
+.comment-row .comments .prev-comment{
+	display: flex;
+	column-gap: 0.3rem;
+}
+.comment-row .comments .prev-comment .post-profile-icon img{
+	width: 30px;
+}
+.comment-row .comments .prev-comment .right-half{
+	font-size: 13px;
+	color: var(--text-color);
+	background: var(--body-color);
+	border-radius: 6px;
+	padding: 10px;
+	display: grid;
+	row-gap: 0.3rem;
+}
+.comment-row .comments .prev-comment .right-half p{
+	font-weight: bold;
+}
+
 .load-more-button{
 	display: block;
 	margin: auto;
 	cursor: pointer;
 	padding: 5px 10px;
 	border: 1px solid #9a9a9a;
-	color: #626262;
+	color: var(--text-color);
 	background: transparent;
 	border-radius: 4px;
+	margin-top: 20px;
 }
 .footer{
 	text-align: center;
@@ -456,7 +537,7 @@ nav{
 	align-items: center;
 	justify-content: space-between;
 	text-decoration: none;
-	color: #626262;
+	color: var(--text-color);
 }
 #dark-btn{
 	position: absolute;
@@ -480,7 +561,6 @@ nav{
 }
 #dark-btn.dark-btn-on{
 	padding-left: 23px;
-	background: #0a0a0a;
 }
 
 
@@ -489,7 +569,7 @@ nav{
 
 .profile-container{
 	padding:20px 15% ;
-	color: #626262;
+	color: var(--text-color);
 
 }
 .cover-img{

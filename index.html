@@ -1,393 +1,458 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width,initial=1.0">
-	<title>SocialBook by akib</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<!-- <script src="https://kit.fontawesome.com/c4254e24a8.js"crossorigin="anonymous"></script> -->
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial=1.0" />
+	<title>SocialBook</title>
+	<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 </head>
+
 <body>
 	<nav>
-		<div class="nav-left ">
+		<div class="nav-left">
 			<a href="index.html">
-			<img src="images/logo.png" class="logo">
-				</a>
+				<img src="images/logo.png" class="logo" />
+			</a>
 			<ul>
-				<li><img src="images/notification.png"></li>
-				<li><img src="images/inbox.png"></li>
-				<li><img src="images/video.png"></li>
+				<li><img src="images/notification.png" /></li>
+				<li><img src="images/inbox.png" /></li>
+				<li><img src="images/video.png" /></li>
 			</ul>
 		</div>
 		<div class="nav-right">
-		        <div class="search-box">
-		        	<img src="images/search.png">
-		        	<input type="text" placeholder="search">
-		        </div>
-		        <div class="nav-user-icon online" onclick="settingsMenuToggle()">
-		        	<img src="images/profile-pic.png">
-		        </div>
+			<div class="search-box">
+				<img src="images/search.png" />
+				<input type="text" placeholder="Search" />
+			</div>
+			<div class="nav-user-icon online" onclick="settingsMenuToggle()">
+				<img src="images/profile-pic.png" />
+			</div>
+		</div>
 
-		    </div>
+		<!------- settings-menu ------------->
+		<div class="settings-menu">
+			<div id="dark-btn">
+				<span></span>
+			</div>
 
+			<div class="settings-meni-inner">
+				<div class="user-profile">
+					<img src="images/profile-pic.png" />
+					<div>
+						<p>John Nicholson</p>
+						<a href="profile.html">See your profile</a>
+					</div>
+				</div>
+				<hr />
 
-         <!------- settings-menu ------------->
-            <div class="settings-menu">
+				<div class="user-profile">
+					<img src="images/feedback.png" />
+					<div>
+						<p>Give Feedback</p>
+						<a href="#">Help us to improve the new design</a>
+					</div>
+				</div>
+				<hr />
 
-            	<div id="dark-btn">
-            		<span></span>
-            	</div>
-
-
-            	<div class="settings-meni-inner">
-            		 
-            		 <div class="user-profile">
-                		<img src="images/profile-pic.png">
-                		<div>
-                			<p>John Nicholson</p>
-                			<a href="profile.html">See your profile</a>
-                		</div>
-                	</div>
-                	<hr>
-
-                	<div class="user-profile">
-                		<img src="images/feedback.png">
-                		<div>
-                			<p>Give Feedback</p>
-                			<a href="#">Help us to improve the new design</a>
-                		</div>
-                	</div>
-                	<hr>
-
-
-                	<div class="settings-link">
-                		<img src="images/setting.png" class="settings-icon">
-                		<a href="#">Settings & Privacy<img src="images/arrow.png" width="10px"></a>
-                	</div>
-                	<div class="settings-link">
-                		<img src="images/help.png" class="settings-icon">
-                		<a href="#">Help & Support<img src="images/arrow.png" width="10px"></a>
-                	</div>
-                	<div class="settings-link">
-                		<img src="images/display.png" class="settings-icon">
-                		<a href="#">Display & Accessibility<img src="images/arrow.png" width="10px"></a>
-                	</div>
-                	<div class="settings-link">
-                		<img src="images/logout.png" class="settings-icon">
-                		<a href="#">Logout<img src="images/arrow.png" width="10px"></a>
-                	</div>
-            	</div>
-            	 
-            	 
-            </div>
-
-
+				<div class="settings-link">
+					<img src="images/setting.png" class="settings-icon" />
+					<a href="#">Settings & Privacy<img src="images/arrow.png" width="10px" /></a>
+				</div>
+				<div class="settings-link">
+					<img src="images/help.png" class="settings-icon" />
+					<a href="#">Help & Support<img src="images/arrow.png" width="10px" /></a>
+				</div>
+				<div class="settings-link">
+					<img src="images/display.png" class="settings-icon" />
+					<a href="#">Display & Accessibility<img src="images/arrow.png" width="10px" /></a>
+				</div>
+				<div class="settings-link">
+					<img src="images/logout.png" class="settings-icon" />
+					<a href="#">Logout<img src="images/arrow.png" width="10px" /></a>
+				</div>
+			</div>
+		</div>
 	</nav>
 
-	 <div class="container">
-	 	<!----------left-sidebar---------->
-	 	<div class="left-sidebar"> 
-	 		<div class="imp-link">
-	 			<a href="#"><img src="images/news.png">Latest News</a>
-	 			<a href="#"><img src="images/friends.png">Friends</a>
-	 			<a href="#"><img src="images/group.png">Group</a>
-	 			<a href="#"><img src="images/marketplace.png">Marketplace</a>
-	 			<a href="#"><img src="images/watch.png">Watch</a>
-	 			<a href="#">See More</a>
-	 		</div>
+	<div class="container">
+		<!----------left-sidebar---------->
+		<div class="left-sidebar">
+			<div class="imp-link">
+				<a href="#"><img src="images/news.png" />Latest News</a>
+				<a href="#"><img src="images/friends.png" />Friends</a>
+				<a href="#"><img src="images/group.png" />Group</a>
+				<a href="#"><img src="images/marketplace.png" />Marketplace</a>
+				<a href="#"><img src="images/watch.png" />Watch</a>
+				<a href="#">See More</a>
+			</div>
 
-	 		<div class="shortcut-links">
-	 			<p>Your Shortcuts</p>
-	 			<a href="#"><img src="images/shortcut-1.png"> Web Developers</a>
-	 			<a href="#"><img src="images/shortcut-2.png"> Web Design Course</a>
-	 			<a href="#"><img src="images/shortcut-3.png"> Full Stack Development</a>
-	 			<a href="#"><img src="images/shortcut-4.png"> Webside Experts</a>
-	 		</div>
-	 	</div>
-		 	      <!--------- main-content ---------->
-		 	     <div class="main-content">
-	 	     	
+			<div class="shortcut-links">
+				<p>Your Shortcuts</p>
+				<a href="#"><img src="images/shortcut-1.png" /> Web Developers</a>
+				<a href="#"><img src="images/shortcut-2.png" /> Web Design Course</a>
+				<a href="#"><img src="images/shortcut-3.png" /> Full Stack Development</a>
+				<a href="#"><img src="images/shortcut-4.png" /> Webside Experts</a>
+			</div>
+		</div>
+		<!--------- main-content ---------->
+		<div class="main-content">
+			<div class="story-gallery">
+				<div class="story story1">
+					<img src="images/upload.png" />
+					<p>Post Story</p>
+				</div>
+				<div class="story story2">
+					<img src="images/member-1.png" />
+					<p>Alison</p>
+				</div>
+				<div class="story story3">
+					<img src="images/member-2.png" />
+					<p>Jackson</p>
+				</div>
+				<div class="story story4">
+					<img src="images/member-3.png" />
+					<p>Samona</p>
+				</div>
+				<div class="story story5">
+					<img src="images/member-4.png" />
+					<p>John doe</p>
+				</div>
+			</div>
 
-	 	     	<div class="story-gallery">
-	 	     		<div class="story story1">
-	 	     			<img src="images/upload.png">
-	 	     			<p>Post Story</p>
-	 	     		</div>
-	 	     		<div class="story story2">
-	 	     			<img src="images/member-1.png">
-	 	     			<p>Alison</p>
-	 	     		</div>
-	 	     		<div class="story story3">
-	 	     			<img src="images/member-2.png">
-	 	     			<p>Jackson</p>
-	 	     		</div>
-	 	     		<div class="story story4">
-	 	     			<img src="images/member-3.png">
-	 	     			<p>Samona</p>
-	 	     		</div>
-	 	     		<div class="story story5">
-	 	     			<img src="images/member-4.png">
-	 	     			<p>John doe</p>
-	 	     		</div>
-	 	     	</div>
+			<div class="write-post-container">
+				<div class="user-profile">
+					<img src="images/profile-pic.png" />
+					<div>
+						<p>John Nicholson</p>
+						<small>Public <i class="fa-solid fa-sort-down"></i> </small>
+					</div>
+				</div>
+				<div class="post-input-container">
+					<textarea rows="3" placeholder="What's on your mind,John? "></textarea>
+					<div class="add-post-links">
+						<a href="#"><img src="images/live-video.png">Live Video</a>
+							<a href="#"><img src="images/photo.png">Photo/Video</a>
+							<a href="#"><img src="images/feeling.png">Feeling/Activity</a>
+					</div>
+				</div>
+			</div>
 
-                <div class="write-post-container">
-                	<div class="user-profile">
-                		<img src="images/profile-pic.png">
-                		<div>
-                			<p>John Nicholson</p>
-                			<small>Public <i class="fa-solid fa-sort-down"></i> </small>
-                		</div>
-                	</div>
-                	<div class="post-input-container">
-                		<textarea rows="3" placeholder="What's on your mind,John? "></textarea>
-                		<div class="add-post-links">
-                			<a href="#"><img src="images/live-video.png">Live Vidio</a>
-                			<a href="#"><img src="images/photo.png">photo/Video</a>
-                			<a href="#"><img src="images/feeling.png">Feeling/Activi</a>
-                			
-                		</div>
-                		
-                	</div>
-                </div>
+			<div class="post-container">
+				<div class="post-row">
+					<div class="user-profile">
+						<img src="images/profile-pic.png" />
+						<div>
+							<p>John Nicholson</p>
+							<span>June 24 2022, 13:40pm</span>
+						</div>
+					</div>
+					<a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
+				</div>
 
+				<p>
+					This website is made by Akibul Hasan Akash. If you like this please
+					give a love react
+				</p>
+				<img src="images/feed-image-1.png" class="post-img" />
+			</div>
 
-                <div class="post-container">
-                	<div class="post-row">
-                		<div class="user-profile">
-                		<img src="images/profile-pic.png">
-                		<div>
-                			<p>John Nicholson</p>
-                			<span>June 24 2022, 13:40pm</span>
-                		</div>
-                	</div>
-                	<a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
-                	</div>
-                	
-                	<p>This website is made by Akibul Hasan Akash. If you like this please give a love react</p>
-                	<img src="images/feed-image-1.png" class="post-img">
-                </div>
+			<div class="post-row">
+				<div class="activity-icons">
+					<div>
+						<i class="fa-regular fa-heart like-btn"></i> <span> 479 </span>
+					</div>
+					<div>
+						<i class="fa-regular fa-comment comment-btn" data-target="cmnt-1"></i>
+						<span> 1 </span>
+					</div>
+					<div>
+						<i class="fa-solid fa-share share-btn"></i> <span> 20 </span>
+					</div>
+				</div>
+				<div class="post-profile-icon">
+					<img src="images/profile-pic.png" />
+					<i class="fa-solid fa-sort-down"></i>
+				</div>
+			</div>
+			<div class="comment-row">
+				<div class="comment-box" id="cmnt-1">
+					<input placeholder="Comment Here" type="text" />
+					<span class="comment-submit-btn">Submit</span>
+				</div>
+				<div class="comments">
+					<div class="prev-comment">
+						<div class="post-profile-icon">
+							<img src="images/member-1.png" />
+						</div>
+						<div class="right-half">
+							<p>Alison Mina</p>
+							<span>Team work does dream work.</span>
+						</div>
+					</div>
+				</div>
+			</div>
 
+			<div class="post-container">
+				<div class="post-row">
+					<div class="user-profile">
+						<img src="images/profile-pic.png" />
+						<div>
+							<p>John Nicholson</p>
+							<span>June 28 2022, 08:30pm</span>
+						</div>
+					</div>
+					<a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
+				</div>
 
-                <div class="post-row">
-					<div class="activity-icons">
-						<div><i class="fa-regular fa-heart like-btn"></i> <span> 479 </span></div>
-						<div><i class="fa-regular fa-comment comment-btn"></i> <span>  45 </span></div>
-						<div><i class="fa-solid fa-share share-btn"></i> <span> 20 </span></div>
-				  </div>
-                	<div class="post-profile-icon">
-                		<img src="images/profile-pic.png"> <i class="fa-solid fa-sort-down"></i>
-                	</div>
-                	
-                </div>
+				<p>
+					like and share this video with your friends.Ask your doubts in the
+					comments.
+				</p>
+				<img src="images/feed-image-2.png" class="post-img" />
+			</div>
 
+			<div class="post-row">
+				<div class="activity-icons">
+					<div>
+						<i class="fa-regular fa-heart like-btn"></i> <span> 340 </span>
+					</div>
+					<div>
+						<i class="fa-regular fa-comment comment-btn" data-target="cmnt-2"></i>
+						<span> 2 </span>
+					</div>
+					<div>
+						<i class="fa-solid fa-share share-btn"></i> <span> 20 </span>
+					</div>
+				</div>
+				<div class="post-profile-icon">
+					<img src="images/profile-pic.png" />
+					<i class="fa-solid fa-sort-down"></i>
+				</div>
+			</div>
+			<div class="comment-row">
+				<div class="comment-box" id="cmnt-2">
+					<input placeholder="Comment Here" type="text" />
+					<span class="comment-submit-btn">Submit</span>
+				</div>
+				<div class="comments">
+					<div class="prev-comment">
+						<div class="post-profile-icon">
+							<img src="images/member-1.png" />
+						</div>
+						<div class="right-half">
+							<p>Alison Mina</p>
+							<span>Friends! Second family. </span>
+						</div>
+					</div>
+					<div class="prev-comment">
+						<div class="post-profile-icon">
+							<img src="images/member-3.png" />
+						</div>
+						<div class="right-half">
+							<p>Samona Rose</p>
+							<span>Great Picture. </span>
+						</div>
+					</div>
+				</div>
+			</div>
 
-                <div class="post-container">
-                	<div class="post-row">
-                		<div class="user-profile">
-                		<img src="images/profile-pic.png">
-                		<div>
-                			<p>John Nicholson</p>
-                			<span>June 28 2022, 08:30pm</span>
-                		</div>
-                	</div>
-                	<a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
-                	</div>
-                	
-                	<p>like and share this video with your friends.Ask your doubts in the comments.</p>
-                	<img src="images/feed-image-2.png" class="post-img">
-                </div>
+			<div class="post-container">
+				<div class="post-row">
+					<div class="user-profile">
+						<img src="images/profile-pic.png" />
+						<div>
+							<p>John Nicholson</p>
+							<span>June 24 2022, 13:40pm</span>
+						</div>
+					</div>
+					<a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
+				</div>
 
+				<p></p>
+				<img src="images/feed-image-3.png" class="post-img" />
+			</div>
 
-                <div class="post-row">
-					<div class="activity-icons">
-						<div><i class="fa-regular fa-heart like-btn"></i> <span> 340 </span></div>
-						<div><i class="fa-regular fa-comment comment-btn"></i> <span>  45 </span></div>
-						<div><i class="fa-solid fa-share share-btn"></i> <span> 20 </span></div>
-				  </div>
-                	<div class="post-profile-icon">
-                		<img src="images/profile-pic.png"> <i class="fa-solid fa-sort-down"></i>
-                	</div>
-                	
-                </div>
+			<div class="post-row">
+				<div class="activity-icons">
+					<div>
+						<i class="fa-regular fa-heart like-btn"></i> <span> 23 </span>
+					</div>
+					<div>
+						<i class="fa-regular fa-comment comment-btn" data-target="cmnt-3"></i>
+						<span> 1 </span>
+					</div>
+					<div>
+						<i class="fa-solid fa-share share-btn"></i> <span> 20 </span>
+					</div>
+				</div>
+				<div class="post-profile-icon">
+					<img src="images/profile-pic.png" />
+					<i class="fa-solid fa-sort-down"></i>
+				</div>
+			</div>
+			<div class="comment-row">
+				<div class="comment-box" id="cmnt-3">
+					<input placeholder="Comment Here" type="text" />
+					<span class="comment-submit-btn">Submit</span>
+				</div>
+				<div class="comments">
+					<div class="prev-comment">
+						<div class="post-profile-icon">
+							<img src="images/member-6.png" />
+						</div>
+						<div class="right-half">
+							<p>Jaki Josh</p>
+							<span>Woah!</span>
+						  </div>
+					</div>
+				</div>
+			</div>
 
+			<div class="post-container">
+				<div class="post-row">
+					<div class="user-profile">
+						<img src="images/member-8.png" />
+						<div>
+							<p>Kaya</p>
+							<span>June 24 2022, 13:40pm</span>
+						</div>
+					</div>
+					<a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
+				</div>
 
+				<p>Me & Study</p>
+				<img src="images/feed-image-4.png" class="post-img" />
+			</div>
 
-                <div class="post-container">
-                	<div class="post-row">
-                		<div class="user-profile">
-                		<img src="images/profile-pic.png">
-                		<div>
-                			<p>John Nicholson</p>
-                			<span>June 24 2022, 13:40pm</span>
-                		</div>
-                	</div>
-                	<a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
-                	</div>
-                	
-                	<p>This webside make by akibul hasan akash .if you like this webside please give a love react</p>
-                	<img src="images/feed-image-3.png" class="post-img">
-                </div>
-
-
-                <div class="post-row">
-					<div class="activity-icons">
-						<div><i class="fa-regular fa-heart like-btn"></i> <span> 23 </span></div>
-						<div><i class="fa-regular fa-comment comment-btn"></i> <span>  45 </span></div>
-						<div><i class="fa-solid fa-share share-btn"></i> <span> 20 </span></div>
-				  </div>
-                	<div class="post-profile-icon">
-                		<img src="images/profile-pic.png"> <i class="fa-solid fa-sort-down"></i>
-                	</div>
-                	
-                </div>
-
-
-                <div class="post-container">
-                	<div class="post-row">
-                		<div class="user-profile">
-                		<img src="images/profile-pic.png">
-                		<div>
-                			<p>John Nicholson</p>
-                			<span>June 24 2022, 13:40pm</span>
-                		</div>
-                	</div>
-                	<a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
-                	</div>
-                	
-                	<p>This webside make by akibul hasan akash .if you like this webside please give a love react</p>
-                	<img src="images/feed-image-4.png" class="post-img">
-                </div>
-
-
-                <div class="post-row">
-					<div class="activity-icons">
-						<div><i class="fa-regular fa-heart like-btn"></i> <span> 50 </span></div>
-						<div><i class="fa-regular fa-comment comment-btn"></i> <span>  45 </span></div>
-						<div><i class="fa-solid fa-share share-btn"></i> <span> 20 </span></div>
-				  </div>
-                	<div class="post-profile-icon">
-                		<img src="images/profile-pic.png"> <i class="fa-solid fa-sort-down"></i>
-                	</div>
-                	
-                </div>
-
-
-
-                <div class="post-container">
-                	<div class="post-row">
-                		<div class="user-profile">
-                		<img src="images/profile-pic.png">
-                		<div>
-                			<p>John Nicholson</p>
-                			<span>June 24 2022, 13:40pm</span>
-                		</div>
-                	</div>
-                	<a href="#"><i class="fa-solid fa-ellipsis-v"></i></a>
-                	</div>
-                	
-                	<p>This webside make by akibul hasan akash .if you like this webside please give a love react</p>
-                	<img src="images/feed-image-5.png" class="post-img">
-                </div>
-
-
-                <div class="post-row">
-					<div class="activity-icons">
-						<div><i class="fa-regular fa-heart like-btn"></i> <span> 10 </span></div>
-						<div><i class="fa-regular fa-comment comment-btn"></i> <span>  45 </span></div>
-						<div><i class="fa-solid fa-share share-btn"></i> <span> 20 </span></div>
-				  </div>
-                	<div class="post-profile-icon">
-                		<img src="images/profile-pic.png"> <i class="fa-solid fa-sort-down"></i>
-                	</div>
-                	
-                </div>
-                 
-
-
-                 <button type="button" class="load-more-button">Load more</button>
-                
-	 	     </div>
-
-
-
-	 	
-	 	<!----------right-sidebar---------->
-             <div class="right-sidebar">
-
-        	 <div class="sidebar-title">
-        		<h4>Events</h4>
-        		<a href="#">See All</a>
-        	</div>
-
-        	<div class="event">
-        		<div class="left-event">
-        		     <h3>18</h3>
-        		     <span>March</span>	
-        		</div>
-        		<div class="right-event">
-        			<h4>Social Media</h4>
-        			<p><i class="fa-solid fa-location-dot"></i> Willson Tech Park</p>
-        			<a href="#">More Info</a>
-        		</div>
-        	</div>
-        	<div class="event">
-        		<div class="left-event">
-        		     <h3>22</h3>
-        		     <span>June</span>	
-        		</div>
-        		<div class="right-event">
-        			<h4>Mobile Marketing</h4>
-        			<p><i class="fa-solid fa-location-dot"></i> Willson Tech Park</p>
-        			<a href="#">More Info</a>
-        		</div>
-        	</div>
-        	<div class="sidebar-title">
-        		<h4>Advertisement</h4>
-        		<a href="#">Close</a>
-        	</div>
-        	<img src="images/advertisement.png" class="sidebar-ads">
-
-            <div class="sidebar-title">
-        		<h4>Conversation</h4>
-        		<a href="#">Hide Chat</a>
-        	</div>
-            
-
-            <div class="online-list">
-            	<div class="online">
-            	    <img src="images/member-1.png">
-            </div> 
-            <p>Alison Mina</p>
-            </div>
-            <div class="online-list">
-            	<div class="online">
-            	    <img src="images/member-2.png">
-            </div> 
-            <p>Jackson Aston</p>
-            </div>
-            <div class="online-list">
-            	<div class="online">
-            	    <img src="images/member-3.png">
-            </div> 
-            <p>Samona Rose</p>
-            </div>   
+			<div class="post-row">
+				<div class="activity-icons">
+					<div>
+						<i class="fa-regular fa-heart like-btn"></i> <span> 50 </span>
+					</div>
+					<div>
+						<i class="fa-regular fa-comment comment-btn" data-target="cmnt-4"></i>
+						<span> 3 </span>
+					</div>
+					<div>
+						<i class="fa-solid fa-share share-btn"></i> <span> 20 </span>
+					</div>
+				</div>
+				<div class="post-profile-icon">
+					<img src="images/profile-pic.png" />
+					<i class="fa-solid fa-sort-down"></i>
+				</div>
+			</div>
+			<div class="comment-row">
+				<div class="comment-box" id="cmnt-4">
+					<input placeholder="Comment Here" type="text" />
+					<span class="comment-submit-btn">Submit</span>
+				</div>
+				<div class="comments">
+					<div class="prev-comment">
+						<div class="post-profile-icon">
+							<img src="images/member-2.png" />
+						</div>
+						<div class="right-half">
+							<p>Jackson Aston</p>
+							<span>Nice Picture.</span>
+						  </div>
+					</div>
+					<div class="prev-comment">
+						<div class="post-profile-icon">
+							<img src="images/profile-pic.png" />
+						</div>
+						<div class="right-half">
+							<p>John Nicholson</p>
+							<span>Team work does dream work.</span>
+						  </div>
+					</div>
+					<div class="prev-comment">
+						<div class="post-profile-icon">
+							<img src="images/member-4.png" />
+						</div>
+						<div class="right-half">
+							<p>John Doe</p>
+							<span>Mac!</span>
+						  </div>
+					</div>
+				</div>
+			</div>
 
 
+			<button type="button" class="load-more-button">Load more</button>
+		</div>
 
+		<!----------right-sidebar---------->
+		<div class="right-sidebar">
+			<div class="sidebar-title">
+				<h4>Events</h4>
+				<a href="#">See All</a>
+			</div>
 
+			<div class="event">
+				<div class="left-event">
+					<h3>18</h3>
+					<span>March</span>
+				</div>
+				<div class="right-event">
+					<h4>Social Media</h4>
+					<p><i class="fa-solid fa-location-dot"></i> Willson Tech Park</p>
+					<a href="#">More Info</a>
+				</div>
+			</div>
+			<div class="event">
+				<div class="left-event">
+					<h3>22</h3>
+					<span>June</span>
+				</div>
+				<div class="right-event">
+					<h4>Mobile Marketing</h4>
+					<p><i class="fa-solid fa-location-dot"></i> Willson Tech Park</p>
+					<a href="#">More Info</a>
+				</div>
+			</div>
+			<div class="sidebar-title">
+				<h4>Advertisement</h4>
+				<a href="#">Close</a>
+			</div>
+			<img src="images/advertisement.png" class="sidebar-ads" />
 
-        </div>
-    </div>
+			<div class="sidebar-title">
+				<h4>Conversation</h4>
+				<a href="#">Hide Chat</a>
+			</div>
 
+			<div class="online-list">
+				<div class="online">
+					<img src="images/member-1.png" />
+				</div>
+				<p>Alison Mina</p>
+			</div>
+			<div class="online-list">
+				<div class="online">
+					<img src="images/member-2.png" />
+				</div>
+				<p>Jackson Aston</p>
+			</div>
+			<div class="online-list">
+				<div class="online">
+					<img src="images/member-3.png" />
+				</div>
+				<p>Samona Rose</p>
+			</div>
+		</div>
+	</div>
 
-     <div class="footer">
-     	<p>Copyright 2022-Akibul hasan akash</p>
-     	
-     </div>  
+	<div class="footer">
+		<p>Copyright 2022 - Akibul Hasan Akash</p>
+	</div>
 
-     <script src="script.js"></script>
+	<script src="script.js"></script>
 </body>
+
 </html>
